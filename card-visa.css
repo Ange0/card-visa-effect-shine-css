@@ -18,12 +18,17 @@ body {
     position: relative;
     color: rgb(152, 154, 155);
     padding: 40px;
-    background-color: black;
+    background-color: rgb(11, 10, 10);
     width: 520px;
     border-radius: 20px;
     box-shadow: 5px 10px 20px rgba(0, 0, 0,0.5);
     display: flex;
     flex-direction: column;
+    transform: rotate(0deg);
+    transition: transform 500ms 200ms;
+}
+.container-card:hover {
+    transform: rotate(4deg);
 }
 
 .item-1 {
@@ -65,13 +70,14 @@ body {
 .container-card::before {
     content: '';
     position:absolute;
-    background: rgba(223, 216, 216, 0.2);
+    background: rgba(168, 152, 152, 0.2);
     width: 80px;
     height: 100%;
     top: 0;
     left: -400px;
     transform: skew(40deg);
 }
+
 .container-card:hover::before {
     animation: shine 1s  2  ease-in-out backwards;
 }
