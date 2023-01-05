@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-card {
+    cursor: pointer;
+    overflow: hidden;;
+    position: relative;
+    color: rgb(152, 154, 155);
+    padding: 40px;
+    background-color: black;
+    width: 520px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chip {
+    margin-top: 15px;
+}
+
+.number-card {
+    margin-top: 15px;
+    font-size: 2.1rem;
+    font-weight:lighter;
+    text-align: justify;
+}
+
+.number-second-card {
+    font-size: 1rem;
+    margin-left: 4px;
+}
+
+.date-exp-card{
+    color: rgb(152, 154, 155);
+    margin-top: 4px;
+    font-size: 1.6rem;
+    font-weight:lighter;
+    text-align: right;
+    margin-right: 40px;
+}
+.user-name-card{
+    color: rgb(210, 213, 215);
+    margin-top: 15px;
+    font-size: 1.6rem;
+    font-weight:lighter;
+}
+
+.container-card::before {
+    content: '';
+    position:absolute;
+    background: rgba(223, 216, 216, 0.2);
+    width: 80px;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    transform: skew(40deg);
+}
+.container-card:hover::before {
+    animation: shine 1s  2  ease-in-out backwards;
+}
+@keyframes shine {
+    0% {
+        left: -400px;
+    }
+    
+    100% {
+        left: 800px;
+    }
+}
